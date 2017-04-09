@@ -1,3 +1,7 @@
 import $ from 'jquery';
 
-$('#main').html('linting');
+require('./style.scss');
+
+$(document).ready(() => {
+  $('#main').html('something is happening');
+});
