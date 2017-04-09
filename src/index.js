@@ -1,3 +1,3 @@
-import $ from "jquery";
+import $ from 'jquery';
 
-$('#main').html('Testing this');
+$('#main').html('linting');

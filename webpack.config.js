@@ -1,25 +1,25 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  entry: ["./src"],
+  entry: ['./src'],
   output: {
-    path: path.resolve(__dirname, "build"),
-    publicPath: "/build",
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/build',
+    filename: 'bundle.js',
   },
   devServer: {
     watchOptions: {
       aggregateTimeout: 300,
-      poll: 1000
-    }
+      poll: 1000,
+    },
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }]
-      }
-    ]
-  }
-}
+        use: ['babel-loader', 'eslint-loader'],
+      },
+    ],
+  },
+};
