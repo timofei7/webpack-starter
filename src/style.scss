@@ -1,22 +1,13 @@
 html {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-	font-family: "Helvetica", sans-serif;
-	background-color: #000;
-}
-
-#main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
-
-	h1 {
-		font-size: 3em;
-	}
+  font-family: "Roboto", sans-serif;
+  color: rgb(10%, 10%, 10%);
+  background: darken(white, 0.2);
 }

@@ -1,6 +1,6 @@
-node_modules*
-build*
-
-# Vim
+npm-debug.log*
+build
+node_modules
+.npm
 .*.swp
 .*.swo
