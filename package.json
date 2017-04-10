@@ -4,7 +4,7 @@
   "description": "A starter pack for basic front ends",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --colors; cp -f index.html build/",
+    "build": "WEBPACK_ENV=production webpack --colors; cp -f index.html build/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot",
@@ -13,6 +13,7 @@
   "author": "CS52",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
@@ -27,6 +28,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "gh-pages": "^0.12.0",
     "node-sass": "^4.5.2",
+    "postcss-loader": "^1.3.3",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "webpack": "^2.3.3",
