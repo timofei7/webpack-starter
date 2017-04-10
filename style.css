@@ -1,0 +1,17 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #000; }
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; }
+  #main h1 {
+    font-size: 3em; }
