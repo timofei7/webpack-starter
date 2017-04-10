@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-require('./style.scss');
+import './style.scss';
 
 $(document).ready(() => {
-  $('#main').html('something is happening');
+  $('#main').html('howdy');
 });

@@ -1,7 +1,14 @@
 const path = require('path');
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin({
+  filename: 'style.css',
+  disable: process.env.NODE_ENV === 'development',
+});
+
 module.exports = {
-  entry: ['./src', './src/style.scss'],
+  entry: ['./src'],
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/build',
@@ -10,22 +17,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: false,
-              importLoaders: true,
-              sourceMap: true,
+        test: /(\.scss)$/,
+        use: extractSass.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: { sourceMap: true },
             },
-          },
-          {
-            loader: 'sass-loader',
-            options: { sourceMap: true },
-          },
-        ],
+            {
+              loader: 'sass-loader',
+              options: { sourceMap: true },
+            },
+          ],
+          fallback: 'style-loader', // use style-loader in development mode
+        }),
       },
       {
         test: /\.js$/,
@@ -34,4 +39,7 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    extractSass,
+  ],
 };
