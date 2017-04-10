@@ -3,5 +3,5 @@ import $ from 'jquery';
 import './style.scss';
 
 $(document).ready(() => {
-  $('#main').html('howdy');
+  $('#main').html('hgelkooo');
 });

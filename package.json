@@ -8,9 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot",
-		"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
-  "author": "the_squid",
+  "author": "CS52",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -26,7 +26,6 @@
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "gh-pages": "^0.12.0",
-    "gh-pages-deploy": "^0.4.2",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
