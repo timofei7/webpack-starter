@@ -4,11 +4,11 @@
   "description": "A starter pack for basic front ends",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --colors",
+    "build": "webpack --colors; cp -f index.html build/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build; gh-pages -d build"
   },
   "author": "CS52",
   "license": "ISC",
