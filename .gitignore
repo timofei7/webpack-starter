@@ -1,5 +1,5 @@
 npm-debug.log*
-build
+public/build
 node_modules
 .npm
 .*.swp

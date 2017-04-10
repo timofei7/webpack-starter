@@ -4,11 +4,12 @@
   "description": "A starter pack for basic front ends",
   "main": "src/index.js",
   "scripts": {
-    "build": "WEBPACK_ENV=production webpack --colors; cp -f index.html build/",
+    "build": "WEBPACK_ENV=production webpack --colors",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "start": "NODE_ENV=development webpack-dev-server --inline --hot",
-    "deploy": "npm run build; gh-pages -d build"
+		"clean": "rimraf public/build",
+    "deploy": "npm run build; gh-pages -d public; npm run clean"
   },
   "author": "CS52",
   "license": "ISC",
