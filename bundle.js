@@ -82,7 +82,7 @@ __webpack_require__(1);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)(document).ready(function () {
-  (0, _jquery2.default)('#main').html('hgelkooo');
+  (0, _jquery2.default)('#main').html('pooo');
 });
 
 /***/ }),
